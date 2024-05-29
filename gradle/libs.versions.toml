@@ -1,0 +1,25 @@
+[versions]
+arouter = "1.0.3"
+arouter_jailbird = "1.0.2"
+agp = "8.4.1"
+hilt = "2.51.1" # https://mvnrepository.com/artifact/com.google.dagger/hilt-android
+hilt_gradle_plugin = "2.45" # Version 2.45 succeeds! Version >= 2.46 fails! https://github.com/google/dagger/releases
+hilt_x = "1.2.0" # https://developer.android.com/jetpack/androidx/releases/hilt
+kotlin = "1.9.0"
+activity = "1.9.0"
+
+[libraries]
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+arouter-api = { module = "com.github.jadepeakpoet.ARouter:arouter-api", version.ref = "arouter" }
+arouter-compiler = { module = "com.github.jadepeakpoet.ARouter:arouter-compiler", version.ref = "arouter" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+hilt-navigationCompose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt_x" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+arouter-jailbird-plugin = { id = "io.github.JailedBird.ARouterPlugin", version.ref = "arouter_jailbird" }
+google-dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt_gradle_plugin" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+
