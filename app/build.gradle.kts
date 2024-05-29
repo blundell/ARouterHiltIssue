@@ -49,7 +49,6 @@ dependencies {
     implementation(libs.androidx.activity)
 
     implementation(libs.hilt.android)
-    implementation(libs.hilt.navigationCompose)
     kapt(libs.hilt.compiler)
     implementation(libs.arouter.api)
     kapt(libs.arouter.compiler)
