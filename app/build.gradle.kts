@@ -39,6 +39,11 @@ android {
             arg("AROUTER_MODULE_NAME", project.getName())
         }
     }
+
+    hilt {
+//        enableExperimentalClasspathAggregation = true
+        enableAggregatingTask = false
+    }
 }
 
 kotlin {
