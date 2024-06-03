@@ -33,3 +33,9 @@ If
 ```hilt_gradle_plugin = "2.46" ``` (or higher)
 
 Then `./gradlew build` fails.
+
+Fixes
+
+#1 Disable the aggregating task from hilt: https://github.com/blundell/ARouterHiltIssue/tree/fix-non-aggregating-hilt-task
+
+#2 Move to a different compiler implementation that uses KSP: https://github.com/blundell/ARouterHiltIssue/tree/fix-arouter-jailbird-ksp
