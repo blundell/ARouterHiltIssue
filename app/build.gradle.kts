@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.dagger.hilt)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.google.ksp)
     alias(libs.plugins.arouter.jailbird.plugin)
 }
 
@@ -34,10 +34,8 @@ android {
         }
     }
 
-    kapt {
-        arguments {
-            arg("AROUTER_MODULE_NAME", project.getName())
-        }
+    ksp {
+        arg("AROUTER_MODULE_NAME", project.getName())
     }
 }
 
@@ -49,7 +47,7 @@ dependencies {
     implementation(libs.androidx.activity)
 
     implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
     implementation(libs.arouter.api)
-    kapt(libs.arouter.compiler)
+    ksp(libs.arouter.compiler)
 }
